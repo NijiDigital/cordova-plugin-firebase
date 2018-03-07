@@ -66,8 +66,9 @@ Download your container-config json file from Tag Manager and add a resource-fil
         ...
 ```
 
-## Changing Notification Icon
-The plugin will use notification_icon from drawable resources if it exists, otherwise the default app icon will is used.
+## Changing Notification Icon (Android)
+
+The plugin will use notification_icon from drawable resources. You must add it by yourself in drawable folder (`<projectroot>/platforms/android/res/drawable`). In order to be visible on Android > 5, it must be a white icon on transparent backgroud. See here to generate icon size : https://romannurik.github.io/AndroidAssetStudio/icons-notification.html#source.type=clipart&source.clipart=ac_unit&source.space.trim=1&source.space.pad=0&name=ic_stat_ac_unit
 
 If you want to set a notification icon with another name, pass it through variable at plugin installation :
 
@@ -110,21 +111,6 @@ and
     <drawable name="notification_icon">@drawable/ic_silhouette</drawable>
 </resources>
 ```
-
-## Notification Colors
-
-On Android Lollipop and above you can also set the accent color for the notification by adding a color setting.
-
-`<projectroot>/res/native/android/res/values/colors.xml`
-```
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="primary">#FFFFFF00</color>
-    <color name="primary_dark">#FF220022</color>
-    <color name="accent">#FF00FFFF</color>
-</resources>
-```
-
 
 ## Methods
 
