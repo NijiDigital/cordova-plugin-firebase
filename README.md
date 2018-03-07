@@ -73,6 +73,10 @@ If you want to set a notification icon with another name, pass it through variab
 
 `cordova plugin add cordova-plugin-firebase@0.1.25 --save --variable NOTIFICATION_ICON_NAME=my_beautiful_icon_name`
 
+For the background color of the notification icon, the default is #FF00FFFF. You can modify the color by passing it through variable at plugin installation :
+
+`cordova plugin add cordova-plugin-firebase@0.1.25 --save --variable NOTIFICATION_ICON_NAME=my_beautiful_icon_name NOTIFICATION_ICON_COLOR=#000000`
+
 To set a big icon and small icon for notifications, define them through drawable nodes.  
 Create the required styles.xml files and add the icons to the  
 `<projectroot>/res/native/android/res/<drawable-DPI>` folders.  

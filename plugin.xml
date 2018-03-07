@@ -12,6 +12,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 
 	<platform name="android">
 		<preference name="NOTIFICATION_ICON_NAME" default="notification_icon"/>
+		<preference name="NOTIFICATION_ICON_COLOR" default="#FF00FFFF"/>
 		<js-module name="FirebasePlugin" src="www/firebase.js">
 			<clobbers target="FirebasePlugin" />
 		</js-module>
@@ -35,6 +36,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService" />
 			<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/$NOTIFICATION_ICON_NAME" />
+			<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/accent" />
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<service android:name="org.apache.cordova.firebase.FirebasePluginMessagingService">
@@ -55,7 +57,9 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 		<source-file src="src/android/FirebasePluginInstanceIDService.java" target-dir="src/org/apache/cordova/firebase" />
 		<source-file src="src/android/FirebasePluginMessagingService.java" target-dir="src/org/apache/cordova/firebase" />
 		<source-file src="src/android/colors.xml" target-dir="res/values" />
-
+		<config-file target="res/values/colors.xml" parent="/resources">
+			<color name="accent">$NOTIFICATION_ICON_COLOR</color>
+		</config-file>
 		<framework src="src/android/build.gradle" custom="true" type="gradleReference" />
 		<framework src="com.google.gms:google-services:+" />
 		<framework src="com.google.android.gms:play-services-tagmanager:+" />
