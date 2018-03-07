@@ -11,6 +11,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 	</engines>
 
 	<platform name="android">
+		<preference name="NOTIFICATION_ICON_NAME" default="notification_icon"/>
 		<js-module name="FirebasePlugin" src="www/firebase.js">
 			<clobbers target="FirebasePlugin" />
 		</js-module>
@@ -33,7 +34,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService" />
-			<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/notification_icon" />
+			<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/$NOTIFICATION_ICON_NAME" />
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<service android:name="org.apache.cordova.firebase.FirebasePluginMessagingService">

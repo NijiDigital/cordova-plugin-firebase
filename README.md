@@ -68,6 +68,11 @@ Download your container-config json file from Tag Manager and add a resource-fil
 
 ## Changing Notification Icon
 The plugin will use notification_icon from drawable resources if it exists, otherwise the default app icon will is used.
+
+If you want to set a notification icon with another name, pass it through variable at plugin installation :
+
+`cordova plugin add cordova-plugin-firebase@0.1.25 --save --variable NOTIFICATION_ICON_NAME=my_beautiful_icon_name`
+
 To set a big icon and small icon for notifications, define them through drawable nodes.  
 Create the required styles.xml files and add the icons to the  
 `<projectroot>/res/native/android/res/<drawable-DPI>` folders.  
