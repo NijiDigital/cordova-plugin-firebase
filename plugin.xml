@@ -61,13 +61,13 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 			<color name="accent">$NOTIFICATION_ICON_COLOR</color>
 		</config-file>
 		<framework src="src/android/build.gradle" custom="true" type="gradleReference" />
-		<framework src="com.google.gms:google-services:+" />
-		<framework src="com.google.android.gms:play-services-tagmanager:11.+" />
-		<framework src="com.google.firebase:firebase-core:11.+" />
-		<framework src="com.google.firebase:firebase-messaging:11.+" />
-		<framework src="com.google.firebase:firebase-crash:11.+" />
-		<framework src="com.google.firebase:firebase-config:11.+" />
-		<framework src="com.google.firebase:firebase-perf:11.+" />
+		<framework src="com.google.gms:google-services:3+" />
+		<framework src="com.google.android.gms:play-services-tagmanager:11.6.2" />
+		<framework src="com.google.firebase:firebase-core:11.6.2" />
+		<framework src="com.google.firebase:firebase-messaging:11.6.2" />
+		<framework src="com.google.firebase:firebase-crash:11.6.2" />
+		<framework src="com.google.firebase:firebase-config:11.6.2" />
+		<framework src="com.google.firebase:firebase-perf:11.6.2" />
 
 	</platform>
 
